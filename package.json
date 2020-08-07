@@ -1,6 +1,6 @@
 {
   "name": "expected-condition-playwright",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "expected-condition-playwright is a Node.js library with useful expected condition class",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
