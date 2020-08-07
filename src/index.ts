@@ -1,9 +1,5 @@
-import { Page } from 'playwright-core';
-
 export class ExpectedCondition {
-  constructor(public page: Page) {}
-
-  public attributeValueToBe(_args: string[]) {
+  public static attributeValueToBe(_args: string[]) {
     return (args: string[]) => {
       const [selector, expectedAttribute, expectedValue] = args;
       const element: HTMLElement | null = document.querySelector(selector);
@@ -16,7 +12,7 @@ export class ExpectedCondition {
     };
   }
 
-  public attributeValueContains(_args: string[]) {
+  public static attributeValueContains(_args: string[]) {
     return (args: string[]) => {
       const [selector, expectedAttribute, expectedValue] = args;
       const element: HTMLElement | null = document.querySelector(selector);
@@ -29,7 +25,7 @@ export class ExpectedCondition {
     };
   }
 
-  public attributeToBeNotEmpty(_args: string[]) {
+  public static attributeToBeNotEmpty(_args: string[]) {
     return (args: string[]) => {
       const [selector, expectedAttribute] = args;
       const element: HTMLElement | null = document.querySelector(selector);
@@ -38,7 +34,7 @@ export class ExpectedCondition {
     };
   }
 
-  public numberOfElementsToBe(_args: string[]) {
+  public static numberOfElementsToBe(_args: string[]) {
     return (args: string[]) => {
       const [selector, expectedNumber] = args;
       const elements: NodeList = document.querySelectorAll(selector);
@@ -47,7 +43,7 @@ export class ExpectedCondition {
     };
   }
 
-  public invisibilityOf(_selector: string) {
+  public static invisibilityOf(_selector: string) {
     return (selector: string) => {
       const element: HTMLInputElement | HTMLElement | null = document.querySelector(selector);
 
@@ -55,7 +51,7 @@ export class ExpectedCondition {
     };
   }
 
-  public textToBePresentInElement(_args: string[]) {
+  public static textToBePresentInElement(_args: string[]) {
     return (args: string[]) => {
       const [selector, expectedText] = args;
       const element: HTMLElement | null = document.querySelector(selector);
@@ -68,7 +64,7 @@ export class ExpectedCondition {
     };
   }
 
-  public textToBePresentInElementValue(_args: string[]) {
+  public static textToBePresentInElementValue(_args: string[]) {
     return (args: string[]): boolean => {
       const [selector, expectedValue] = args;
       const element: HTMLInputElement | null = document.querySelector(selector);
@@ -81,7 +77,7 @@ export class ExpectedCondition {
     };
   }
 
-  public elementToBeClickable(_selector: string) {
+  public static elementToBeClickable(_selector: string) {
     return (selector: string) => {
       const element: HTMLInputElement | null = document.querySelector(selector);
 
@@ -89,7 +85,7 @@ export class ExpectedCondition {
     };
   }
 
-  public elementToBeSelected(_selector: string) {
+  public static elementToBeSelected(_selector: string) {
     return (selector: string) => {
       const element: HTMLInputElement | null = document.querySelector(selector);
 
@@ -97,19 +93,19 @@ export class ExpectedCondition {
     };
   }
 
-  public titleEquals(_expectedTitle: string) {
+  public static titleEquals(_expectedTitle: string) {
     return (expectedTitle: string) => document.title === expectedTitle;
   }
 
-  public titleContains(_expectedTitle: string) {
+  public static titleContains(_expectedTitle: string) {
     return (expectedTitle: string) => document.title.includes(expectedTitle);
   }
 
-  public urlEquals(_expectedUrl: string) {
+  public static urlEquals(_expectedUrl: string) {
     return (expectedUrl: string) => window.location.href === expectedUrl;
   }
 
-  public urlContains(_expectedUrl: string) {
+  public static urlContains(_expectedUrl: string) {
     return (expectedUrl: string) => window.location.href.includes(expectedUrl);
   }
 }
