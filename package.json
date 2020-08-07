@@ -1,0 +1,32 @@
+{
+  "name": "expected-condition-playwright",
+  "version": "1.0.0",
+  "description": "expected-condition-playwright is a Node.js library with useful expected condition class",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "files": ["lib/*"],
+  "scripts": {
+    "build": "tsc",
+    "lint": "tslint -p tsconfig.json",
+    "format:check": "prettier --check 'src/*.ts'",
+    "format:write": "prettier --write 'src/*.ts'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/elaichenkov/expected-condition-playwright.git"
+  },
+  "keywords": [
+    "playwright",
+    "expectedConditions",
+    "wait",
+    "for",
+    "expected",
+    "conditions"
+  ],
+  "author": "Yevhen Laichenkov <elaichenkov@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/elaichenkov/expected-condition-playwright/issues"
+  },
+  "homepage": "https://github.com/elaichenkov/expected-condition-playwright#readme"
+}
