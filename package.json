@@ -4,7 +4,9 @@
   "description": "expected-condition-playwright is a Node.js library with useful expected condition class",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
-  "files": ["lib/*"],
+  "files": [
+    "lib/*"
+  ],
   "scripts": {
     "build": "tsc",
     "lint": "tslint -p tsconfig.json",
@@ -28,5 +30,13 @@
   "bugs": {
     "url": "https://github.com/elaichenkov/expected-condition-playwright/issues"
   },
-  "homepage": "https://github.com/elaichenkov/expected-condition-playwright#readme"
+  "homepage": "https://github.com/elaichenkov/expected-condition-playwright#readme",
+  "devDependencies": {
+    "playwright-core": "^1.3.0",
+    "prettier": "^2.0.5",
+    "ts-node": "^8.10.2",
+    "tslint": "^6.1.3",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^3.9.7"
+  }
 }
