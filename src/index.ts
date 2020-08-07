@@ -94,7 +94,7 @@ export class ExpectedCondition {
       const element: HTMLInputElement | null = document.querySelector(selector);
 
       return element && element.checked;
-    }
+    };
   }
 
   public titleEquals(_expectedTitle: string) {
