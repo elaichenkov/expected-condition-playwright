@@ -1,10 +1,10 @@
-# expected-condition-playwright
+# Expected Condition
 
-> expected-condition-playwright is a Node.js library for [Playwright](https://github.com/microsoft/playwright) that supplies a set of common conditions that provides functionalities to wait for certain conditions till a defined task is complete.
+> expected-condition-playwright is a Node.js library for [Playwright](https://github.com/microsoft/playwright) and [Puppeteer](https://github.com/puppeteer/puppeteer) that supplies a set of common conditions that provides functionalities to wait for certain conditions till a defined task is complete.
 
 ## Table of Contents
 
-- [expected-condition-playwright](#expected-condition-playwright)
+- [Expected Condition](#expected-condition)
   - [Table of Contents](#table-of-contents)
   - [Getting Started](#getting-started)
     - [Installation](#installation)
