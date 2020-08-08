@@ -1,5 +1,5 @@
 export class ExpectedCondition {
-  public static attributeValueToBe(_args: string[]) {
+  public static attributeValueToBe([_selector, _expectedAttribute, _expectedValue]: [string, string, string]) {
     return (args: string[]) => {
       const [selector, expectedAttribute, expectedValue] = args;
       const element: HTMLElement | null = document.querySelector(selector);
@@ -12,7 +12,7 @@ export class ExpectedCondition {
     };
   }
 
-  public static attributeValueContains(_args: string[]) {
+  public static attributeValueContains([_selector, _expectedAttribute, _expectedValue]: [string, string, string]) {
     return (args: string[]) => {
       const [selector, expectedAttribute, expectedValue] = args;
       const element: HTMLElement | null = document.querySelector(selector);
@@ -25,7 +25,7 @@ export class ExpectedCondition {
     };
   }
 
-  public static attributeToBeNotEmpty(_args: string[]) {
+  public static attributeToBeNotEmpty([_selector, _expectedAttribute]: [string, string]) {
     return (args: string[]) => {
       const [selector, expectedAttribute] = args;
       const element: HTMLElement | null = document.querySelector(selector);
@@ -34,7 +34,7 @@ export class ExpectedCondition {
     };
   }
 
-  public static numberOfElementsToBe(_args: string[]) {
+  public static numberOfElementsToBe([_selector, _expectedNumber]: [string, string]) {
     return (args: string[]) => {
       const [selector, expectedNumber] = args;
       const elements: NodeList = document.querySelectorAll(selector);
@@ -51,7 +51,7 @@ export class ExpectedCondition {
     };
   }
 
-  public static textToBePresentInElement(_args: string[]) {
+  public static textToBePresentInElement([_selector, _expectedText]: [string, string]) {
     return (args: string[]) => {
       const [selector, expectedText] = args;
       const element: HTMLElement | null = document.querySelector(selector);
@@ -64,7 +64,7 @@ export class ExpectedCondition {
     };
   }
 
-  public static textToBePresentInElementValue(_args: string[]) {
+  public static textToBePresentInElementValue([_selector, _expectedValue]: [string, string]) {
     return (args: string[]): boolean => {
       const [selector, expectedValue] = args;
       const element: HTMLInputElement | null = document.querySelector(selector);
