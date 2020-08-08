@@ -126,7 +126,7 @@ An expectation for checking number of elements with given selector
 
 ```ts
 const links = 'a';
-const expectedNumber = 12;
+const expectedNumber = '12';
 
 await page.waitForFunction(EC.numberOfElementsToBe([links, expectedNumber]), [links, expectedNumber], {
   timeout: 5000,
